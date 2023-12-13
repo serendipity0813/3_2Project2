@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryUIBtn : MonoBehaviour
 {
     public GameObject Info;
+    public GameObject ButtonUI;
     public GameObject InventoryUI;
 
     // Start is called before the first frame update
@@ -13,11 +14,13 @@ public class InventoryUIBtn : MonoBehaviour
     {
         InventoryUI.SetActive(true);
         Info.SetActive(false);
+        ButtonUI.SetActive(false);
     }
 
     public void InventoryOff()
     {
         InventoryUI.SetActive(false);
+        ButtonUI.SetActive(true);
         Info.SetActive(true);
     }
 }
