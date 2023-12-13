@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38313850cba3dd049a5536c64c5af576, type: 3}
   m_Name: BlackHelmet
   m_EditorClassIdentifier: 
-  itemName: 
-  itemImage: {fileID: 0}
-  description: 
+  itemName: BlackHelmet
+  itemImage: {fileID: 21300000, guid: 41bb7bc74638a33479fb9db41d7fff04, type: 3}
+  description: "\uC0C1\uC704\uAE30\uC0AC\uAC00 \uC0AC\uC6A9\uD558\uB294 \uD22C\uAD6C"
   type: 0
   attack: 0
   HP: 90

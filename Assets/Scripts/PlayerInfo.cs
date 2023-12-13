@@ -1,51 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Stat
-{
-    [HideInInspector]
-    public float curValue;
-    public float maxValue;
-    public float startValue = 30;
-    public Image uiBar;
-
-    public void Add(float amount)
-    {
-        curValue = Mathf.Min(curValue + amount, maxValue);
-    }
-
-    public float GetPercentage()
-    {
-        return curValue / maxValue;
-    }
-
-}
-
+[Serializable]
 public class PlayerInfo : MonoBehaviour
 {
-    public Stat HP;
-    public Stat MP;
-    public Stat ATK;
-    public Stat Armor;
+    public int HP = 50;
+    public int bonusHP;
+    public int MP = 50;
+    public int bonusMP;
+    public int ATK = 50;
+    public int bonusATK;
+    public int Armor = 50;
+    public int bonusArmor;
+    public static PlayerInfo player { get; private set; }
 
-    void Start()
+    private void Awake()
     {
-        HP.curValue = HP.startValue;
-        MP.curValue = MP.startValue;
-        ATK.curValue = ATK.startValue;
-        Armor.curValue = Armor.startValue;
-
+        if (player == null)
+        {
+            player = this;
+        }
     }
 
-    void Update()
-    {
-        HP.uiBar.fillAmount = HP.GetPercentage();
-        MP.uiBar.fillAmount = MP.GetPercentage();
-        ATK.uiBar.fillAmount = ATK.GetPercentage();
-        Armor.uiBar.fillAmount = Armor.GetPercentage();
-    }
-
-
+    
 }

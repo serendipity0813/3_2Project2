@@ -9,10 +9,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - EE
   - Water
   - UI
-  - 
+  - EquipUI
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1332850841
+    locked: 0
+  - name: EquipUI
+    uniqueID: 3107635415
     locked: 0
