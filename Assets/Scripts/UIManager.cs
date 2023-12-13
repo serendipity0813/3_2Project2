@@ -10,4 +10,5 @@ public class UIManager : MonoBehaviour
     public Text ATKtxt;
     public Text Armortxt;
 
+
 }
