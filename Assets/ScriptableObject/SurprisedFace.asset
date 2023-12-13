@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38313850cba3dd049a5536c64c5af576, type: 3}
+  m_Name: SurprisedFace
+  m_EditorClassIdentifier: 
+  itemName: SurprisedFace
+  itemImage: {fileID: 21300000, guid: f198aff67638c964488b5a0f75476504, type: 3}
+  description: "\uB180\uB780 \uC5BC\uAD74\uC785\uB2C8\uB2E4."
+  type: 4
+  attack: 0
+  HP: 20
+  MP: 20
+  armor: 20
