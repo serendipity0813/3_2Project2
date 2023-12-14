@@ -17,6 +17,6 @@ MonoBehaviour:
   description: "\uC740\uC73C\uB85C \uB9CC\uB4E0 \uAC11\uC637"
   type: 3
   attack: 0
-  HP: 60
-  MP: 60
-  armor: 60
+  HP: 200
+  MP: 0
+  armor: 0

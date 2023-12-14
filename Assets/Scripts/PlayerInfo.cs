@@ -8,23 +8,29 @@ using UnityEngine.UI;
 [Serializable]
 public class PlayerInfo : MonoBehaviour
 {
-    public int HP = 50;
+    public int HP;
+    public int MP;
+    public int ATK;
+    public int Armor;
     public int bonusHP;
-    public int MP = 50;
     public int bonusMP;
-    public int ATK = 50;
     public int bonusATK;
-    public int Armor = 50;
     public int bonusArmor;
-    public static PlayerInfo player { get; private set; }
 
-    private void Awake()
+    public static PlayerInfo player { get; set; }
+
+
+    private void Start()
     {
-        if (player == null)
+        if(player == null)
         {
             player = this;
         }
+
     }
 
-    
+
+
 }
+
+

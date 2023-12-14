@@ -17,6 +17,6 @@ MonoBehaviour:
   description: "\uB180\uB780 \uC5BC\uAD74\uC785\uB2C8\uB2E4."
   type: 4
   attack: 0
-  HP: 20
-  MP: 20
-  armor: 20
+  HP: 0
+  MP: 0
+  armor: 0
