@@ -8,6 +8,7 @@ using UnityEngine.UI;
 [Serializable]
 public class PlayerInfo : MonoBehaviour
 {
+    public int Money;
     public int HP;
     public int MP;
     public int ATK;

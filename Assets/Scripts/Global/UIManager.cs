@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
+    [SerializeField] private Text MoneyTxt;
     [SerializeField] private Text HpTxt;
     [SerializeField] private Text MpTxt;
     [SerializeField] private Text AtkTxt;
@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider AtkSlider;
     [SerializeField] private Slider ArmorSlider;
 
-
+    private int playerMoney;
     private int playerHp;
     private int playerMp;
     private int playerAtk;
@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        StatSetting();
+        Setting();
         GetPercentage();
     }
 
@@ -37,29 +37,30 @@ public class UIManager : MonoBehaviour
         UpdateUI();
     }
 
-    void StatSetting()
+    void Setting()
     {
         playerHp = PlayerInfo.player.HP;
         playerMp = PlayerInfo.player.MP;
         playerAtk = PlayerInfo.player.ATK;
         playerArmor = PlayerInfo.player.Armor;
+        playerMoney = PlayerInfo.player.Money;
     }
 
     void GetPercentage()
     {
-        HpSlider.value = (playerHp / (float)MaxHp) * 100;
-        MpSlider.value = Mathf.Round(playerMp / MaxMp);
-        AtkSlider.value = Mathf.Round(playerAtk / MaxAtk);
-        ArmorSlider.value = Mathf.Round(playerArmor / MaxArmor);
+        HpSlider.value = (playerHp / (float)MaxHp);
+        MpSlider.value = (playerMp / (float)MaxMp);
+        AtkSlider.value = (playerAtk / (float)MaxAtk);
+        ArmorSlider.value = (playerArmor / (float)MaxArmor);
     }
 
     void UpdateUI()
     {
         HpTxt.text = "HP : " + playerHp.ToString() + " / " + MaxHp.ToString();
-        HpTxt.text = "MP : " + playerMp.ToString() + " / " + MaxMp.ToString();
-        HpTxt.text = "Atk : " + playerAtk.ToString() + " / " + MaxAtk.ToString();
-        HpTxt.text = "Armor : " + playerArmor.ToString() + " / " + MaxArmor.ToString();
-
+        MpTxt.text = "MP : " + playerMp.ToString() + " / " + MaxMp.ToString();
+        AtkTxt.text = "Atk : " + playerAtk.ToString() + " / " + MaxAtk.ToString();
+        ArmorTxt.text = "Armor : " + playerArmor.ToString() + " / " + MaxArmor.ToString();
+        MoneyTxt.text = playerMoney.ToString();
     }
 
 
